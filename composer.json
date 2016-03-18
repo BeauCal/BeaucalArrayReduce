@@ -1,0 +1,24 @@
+{
+    "name": "beaucal/beaucal-array-reduce",
+    "description": "Handy array-reduce functions, like 'are all matching', 'is one matching', 'first matching'",
+    "license": "MIT",
+    "keywords": [
+       "reduce", "array_reduce"
+    ],
+    "homepage": "https://github.com/BeauCal/beaucal-array-reduce",
+    "authors": [
+        {
+            "name": "Derek Illchuk",
+            "email": "derek@beaucal.com",
+            "homepage": "https://www.beaucal.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+	"autoload": {
+        "psr-4": {
+            "BeaucalArrayReduce": "src/"
+        }
+    }
+}
