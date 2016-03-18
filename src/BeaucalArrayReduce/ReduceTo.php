@@ -25,7 +25,7 @@ class ReduceTo {
      *
      * @return bool
      */
-    static function allThat(array $items, $predicate) {
+    static function allMatch(array $items, $predicate) {
         return array_reduce($items,
         function($carry, $item) use ($predicate) {
             return ($carry && $predicate($item));
@@ -41,8 +41,8 @@ class ReduceTo {
      *
      * @return bool
      */
-    static function hasThat(array $items, $predicate) {
-        return (bool) self::countThat($items, $predicate);
+    static function hasMatch(array $items, $predicate) {
+        return (bool) self::countMatch($items, $predicate);
     }
 
     /**
@@ -53,7 +53,7 @@ class ReduceTo {
      *
      * @return int
      */
-    static function countThat(array $items, $predicate) {
+    static function countMatch(array $items, $predicate) {
         return array_reduce($items,
         function($carry, $item) use ($predicate) {
             return $carry + ($predicate($item) ? 1 : 0);
@@ -68,7 +68,7 @@ class ReduceTo {
      *
      * @return mixed
      */
-    static function firstThat(array $items, $predicate = null) {
+    static function firstMatch(array $items, $predicate = null) {
         if ($predicate === null) {
             $predicate = static::predicateDefault();
         }
@@ -89,7 +89,7 @@ class ReduceTo {
      *
      * @return mixed
      */
-    static function lastThat(array $items, $predicate = null) {
+    static function lastMatch(array $items, $predicate = null) {
         if ($predicate === null) {
             $predicate = static::predicateDefault();
         }

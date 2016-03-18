@@ -7,15 +7,15 @@ use BeaucalArrayReduce\ReduceTo;
 class ReduceToTest extends \PHPUnit_Framework_TestCase {
 
     /**
-     * @dataProvider dataAllThat
+     * @dataProvider dataAllMatch
      */
-    public function testAllThat($items, $predicate, $expected) {
+    public function testAllMatch($items, $predicate, $expected) {
         $this->assertEquals(
-        $expected, ReduceTo::allThat($items, $predicate)
+        $expected, ReduceTo::allMatch($items, $predicate)
         );
     }
 
-    public static function dataAllThat() {
+    public static function dataAllMatch() {
         $fnIsNumeric = function($item) {
             return is_numeric($item);
         };
@@ -34,15 +34,15 @@ class ReduceToTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @dataProvider dataHasThat
+     * @dataProvider dataHasMatch
      */
-    public function testHasThat($items, $predicate, $expected) {
+    public function testHasMatch($items, $predicate, $expected) {
         $this->assertEquals(
-        $expected, ReduceTo::hasThat($items, $predicate)
+        $expected, ReduceTo::hasMatch($items, $predicate)
         );
     }
 
-    public static function dataHasThat() {
+    public static function dataHasMatch() {
         $fnIsNumeric = function($item) {
             return is_numeric($item);
         };
@@ -61,15 +61,15 @@ class ReduceToTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @dataProvider dataCountThat
+     * @dataProvider dataCountMatch
      */
-    public function testCountThat($items, $predicate, $expected) {
+    public function testCountMatch($items, $predicate, $expected) {
         $this->assertEquals(
-        $expected, ReduceTo::countThat($items, $predicate)
+        $expected, ReduceTo::countMatch($items, $predicate)
         );
     }
 
-    public static function dataCountThat() {
+    public static function dataCountMatch() {
         $fnIsNumeric = function($item) {
             return is_numeric($item);
         };
@@ -88,15 +88,15 @@ class ReduceToTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @dataProvider dataFirstThat
+     * @dataProvider dataFirstMatch
      */
-    public function testFirstThat($items, $predicate, $expected) {
+    public function testFirstMatch($items, $predicate, $expected) {
         $this->assertEquals(
-        $expected, ReduceTo::firstThat($items, $predicate)
+        $expected, ReduceTo::firstMatch($items, $predicate)
         );
     }
 
-    public static function dataFirstThat() {
+    public static function dataFirstMatch() {
         $fnIsNumeric = function($item) {
             return is_numeric($item);
         };
@@ -116,15 +116,15 @@ class ReduceToTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @dataProvider dataLastThat
+     * @dataProvider dataLastMatch
      */
-    public function testLastThat($items, $predicate, $expected) {
+    public function testLastMatch($items, $predicate, $expected) {
         $this->assertEquals(
-        $expected, ReduceTo::lastThat($items, $predicate)
+        $expected, ReduceTo::lastMatch($items, $predicate)
         );
     }
 
-    public static function dataLastThat() {
+    public static function dataLastMatch() {
         $fnIsNumeric = function($item) {
             return is_numeric($item);
         };
