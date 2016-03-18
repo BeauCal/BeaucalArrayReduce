@@ -108,6 +108,7 @@ class ReduceToTest extends \PHPUnit_Framework_TestCase {
         };
         return [
             [[], null, null],
+            [[0, 1, 2, 3, 4, 5], null, 1],
             [[0, 1, 2, 3, 4, 5], $fnIsNumeric, 0],
             [[0, 1, 2, 3, 4, 5], $fnGtZero, 1],
             [[0, 1, 2, 3, 4, 5], $fnEqTen, null]
@@ -135,6 +136,7 @@ class ReduceToTest extends \PHPUnit_Framework_TestCase {
         };
         return [
             [[], null, null],
+            [[0, 1, 2, 3, 4, 5, false], null, 5],
             [[0, 1, 2, 3, 4, 5], $fnIsNumeric, 5],
             [[0, 1, 2, 3, 4, 5], $fnLtFour, 3],
             [[0, 1, 2, 3, 4, 5], $fnEqTen, null]

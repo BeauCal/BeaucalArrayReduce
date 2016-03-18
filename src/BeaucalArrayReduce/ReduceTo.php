@@ -1,6 +1,6 @@
 <?php
 
-namespace Application\Util;
+namespace BeaucalArrayReduce;
 
 class ReduceTo {
 
