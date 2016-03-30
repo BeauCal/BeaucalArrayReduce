@@ -2,8 +2,6 @@
 
 namespace BeaucalArrayReduceTest;
 
-use BeaucalArrayReduce\ReduceTo;
-
 class ReduceToTest extends \PHPUnit_Framework_TestCase {
 
     /**
@@ -11,7 +9,7 @@ class ReduceToTest extends \PHPUnit_Framework_TestCase {
      */
     public function testAllMatch($items, $predicate, $expected) {
         $this->assertEquals(
-        $expected, ReduceTo::allMatch($items, $predicate)
+        $expected, \BeaucalArrayReduce\allMatch($items, $predicate)
         );
     }
 
@@ -38,7 +36,7 @@ class ReduceToTest extends \PHPUnit_Framework_TestCase {
      */
     public function testHasMatch($items, $predicate, $expected) {
         $this->assertEquals(
-        $expected, ReduceTo::hasMatch($items, $predicate)
+        $expected, \BeaucalArrayReduce\hasMatch($items, $predicate)
         );
     }
 
@@ -65,7 +63,7 @@ class ReduceToTest extends \PHPUnit_Framework_TestCase {
      */
     public function testCountMatch($items, $predicate, $expected) {
         $this->assertEquals(
-        $expected, ReduceTo::countMatch($items, $predicate)
+        $expected, \BeaucalArrayReduce\countMatch($items, $predicate)
         );
     }
 
@@ -92,7 +90,7 @@ class ReduceToTest extends \PHPUnit_Framework_TestCase {
      */
     public function testFirstMatch($items, $predicate, $expected) {
         $this->assertEquals(
-        $expected, ReduceTo::firstMatch($items, $predicate)
+        $expected, \BeaucalArrayReduce\firstMatch($items, $predicate)
         );
     }
 
@@ -120,7 +118,7 @@ class ReduceToTest extends \PHPUnit_Framework_TestCase {
      */
     public function testLastMatch($items, $predicate, $expected) {
         $this->assertEquals(
-        $expected, ReduceTo::lastMatch($items, $predicate)
+        $expected, \BeaucalArrayReduce\lastMatch($items, $predicate)
         );
     }
 

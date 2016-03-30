@@ -10,7 +10,7 @@
          syntaxCheck="true"
         >
     <testsuite name="BeaucalArrayReduceTest Suite">
-        <directory>tests/BeaucalArrayReduceTest</directory>
+        <directory>tests</directory>
     </testsuite>
 
     <filter>
